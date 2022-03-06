@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href ="2. style.css">
+    <! rel = "stylesheet" tells the browser the relationship to the file which we are linkling >
+    <!style>
+        /* div is the selector that tells on which element the style will be applied */
+        div{
+            color:red;
+            font-size: 14pt;
+            
+        }
+        p{
+            background-color: azure;
+        }
+    </style> 
+</head>
+<body>
+    <div class ="big bold">
+        <! this element has both class "big" & "bold" so bothh the properties get applie to it
+        This is inside div
+    </div>
+    <p style ="font-size: 20pt; border: 1px solid black">  <! this type of styling  is called inline styling the difference is that when we write styling for any element in style.css it get applied to all the elements of that type or elements with same name >
+        This is inside Paragraph
+    </p>
+    <div class ="big">this is div </div>
+    <div id="one" >this is div </div> <! id selector is one-one mapping>
+    <div id="two" >this is div </div>
+    <p class= "bold"> this is paragraph </p>
+    <p class ="big"> this is paragraph </p>
+    <p class ="big"> this is paragraph </p>
+
+</body>
+</html>
+
+CSS Selectors define the elements to which a set of css rules apply

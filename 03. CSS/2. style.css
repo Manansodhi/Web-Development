@@ -1,0 +1,22 @@
+
+* {
+    /* wild card selector this will style the entire page with same style property */
+    font-style: italic;
+}
+
+div{
+    color:red;
+    font-size: 14pt;
+    
+}
+p{
+    background-color: azure;
+}
+
+.big {
+    font-size: 25pt;
+}
+
+.bold {
+    font-weight: bold;
+}
