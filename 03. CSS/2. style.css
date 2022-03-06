@@ -5,12 +5,12 @@
 }
 
 div{
-    color:red;
+    color:rgb(0, 255, 64);
     font-size: 14pt;
     
 }
 p{
-    background-color: azure;
+    background-color: yellow;
 }
 /*CSS Selectors define the elements to which a set of css rules apply 
 for class name we use .classname
@@ -35,47 +35,54 @@ for class name we use .classname
 
 input[disabled] {
     width:300px;
+    background-color:goldenrod;
 }
 
 input[type = "text"] {
     height:300px;
     font-size:30pt;
+    background-color: aqua;
 }
 
 /*Combinators allow us to select particular elemnet based on its position of screen 
-adjacent sibling, general sibling, child, descendant combinator*/
+TYPES -> adjacent sibling, general sibling, child, descendant combinator*/
 
 /*general sibling comparator*/
-h2 + p {
+/*h2 + p {
     font-weight: bold;
 }
 
- /* adjacent sibling combionator so all the paragraph tag after h2 get color red but section p tag does not but when we have h2 tag inside section and after h2
+ /* adjacent sibling combionator: so all the paragraph tag after h2 get color red but section p tag does not but when we have h2 tag inside section and after h2
   we have p then p tag inside section under h2 will also be red but if h2 is after p tag then it will not have red color and word sibling from adjacent sibling
-   combinator means that paragraph that come after h2 will get effected and its color get changed, and as we know browser read pages from top to bottom so it 
+   combinator means that paragraph that come after h2 will get affected and its color get changed, and as we know browser read pages from top to bottom so it 
    will not read above p tag after reading h2 tag (means it will not go in reverse direction to read p tag*/
-h2 ~ p {
-    color : red;
-}
 
-section > p {
-    background-color: aqua;
-}
-/* means ki jo bhi p tag elements section ke ander h un per ye property lga do*/
+/*h2 ~ p {
+    color : red;
+}*/
+
+/*child combinator: means ki jo bhi p tag element section ke ander h un per ye property lga do. child combinators "greater than operator" select nodes that are not direct children of the first element */
+/* section > p {
+    background-color: rgb(255, 0, 64);
+} */
+
+
 
 section p {
     font-family: monospace;
+    background-color: teal;
 }
 
-/*means it will affect any p tag element which might not be direct child of section but it could be child of an element which it self is the child of section
+/*descendant combinator " "(space) selects nodes that are descendants of first 
+    element.means it will affect any p tag element which might not be direct child of section but it could be child of an element which itself is the child of section
 (grand child,grand grand child) */
 
 .box {
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     background-color: orange;
     padding: 10px;
-    color: darkslategrey;
+    color: rgb(48, 22, 139);
 }
 
 .box:hover {
@@ -86,9 +93,9 @@ section p {
 
 /*active state when we are on box and we click and hold*/
 .box:active {
-    height: 100;
-    width: 100px;
-    font-size: 25pt;
+    height: 50;
+    width: 50px;
+    font-size: 15pt;
 }
 
 /*when we are outside the box it's size will be small and when we click inside the text box it enlarge (it focuses when keyborad is on the element and active when

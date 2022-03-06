@@ -6,46 +6,56 @@
     <title>Document</title>
     <link rel="stylesheet" href ="2. style.css">
     <! rel = "stylesheet" tells the browser the relationship to the file which we are linkling >
-    <!style>
+    <style>
         /* div is the selector that tells on which element the style will be applied */
-        div{
-            color:red;
+        /*div {
+            color: blue;
             font-size: 14pt;
             
         }
         p{
             background-color: azure;
-        }
+        }*/
     </style> 
 </head>
 <body>
+    <! this element has both class "big" & "bold" so bothh the properties get applied to it>
     <div class ="big bold">
-        <! this element has both class "big" & "bold" so bothh the properties get applie to it
         This is inside div
     </div>
     <! this type of styling  is called inline styling the difference is that when we write styling for any element in style.css it get applied to all the elements 
     of that type or elements with same name>
-    <p style ="font-size: 20pt; border: 1px solid black">  
+    <p style ="font-size: 20pt; border: 5px solid blueviolet">  
         inside Paragraph
     </p>
     <div class ="big">this is div </div>
-    <div id="one two" >this is div </div> <! id selector is one-one mapping, when we give 2 id's it can not parse id's like one SPACE two>
+    <div id="one two" >this is div </div> 
+    <! id selector is one-one mapping, when we give 2 id's it can not parse id's like one SPACE two , THIS IS WRONG>
+    
     <div id="two" >this is div </div>
-    <div id="one" >this is div </div><!we name this id with same name then this is wrong we should not do that, one element should have only id >
-    <p class= "bold"> this is paragraph </p><! class can be applied on multiple elements and we can also apply 2 classes on same element
+    <div id="one" >this is div </div>
+    <!we name this id with same name then this is wrong we should not do that, one element should have only id >
+   
+    <p class= "bold"> this is paragraph </p>
+    <! class can be applied on multiple elements and we can also apply 2 classes on same element>
+    
     <p class ="big"> this is paragraph </p>
     <p class ="big"> this is paragraph </p>
+
     <!attribute selector selects element based on the value of the given attribute>
     <input type = "text" value ="abcd">
+
     <input disabled value="efgh">
+
+    <!COMBINATORS>
 
     <h2>this is heading 2</h2>
     <p>this is first para</p>
     <p>this is second para</p>
     <p>this is third para</p>
-    <! what we see after applying comparator is that  first para after h2 tag get bold but 2nd para doesnot get bold>
+    <! what we see after applying general sibling combinators is that first para after h2 tag get bold but 2nd para doesnot get bold>
 
-    <!section>
+    <section>
         <h2>inside section h2 tag</h2>
         <p>this  is inside section p tag</p>
     </section>
@@ -54,9 +64,9 @@
      and both share same parent) but in adjacent sibling it get applied to only adjacent elements (second elements directly follows the first and both share the same 
      parent)>
 
-    <! child combinators ">" select nodes that are not direct children of the first element, descendant combinator " "(space) selects nodes that are descendants of first 
-    element>
-    <!section>
+    <! child combinators "greater than operator" select nodes that are not direct children of the first element, descendant combinator " "(space) selects nodes that are descendants of first 
+    element. means ki jo bhi p tag element section ke ander h un per ye property lga do. per article tag and h2 tag per nahi hua apply>
+    <section>
         <p>outer para</p>
         <article>
             <p>article para</p>
@@ -67,7 +77,9 @@
     </section>
 
     <!pseudo Selector these are that do not really exit on page when we write the page but they get applied when we run the page
-    <div class="box">hello</box>
+    <div class=box>hello</div>
+    <br>
+    <br>
     <input type = "text">
 
 </body>
