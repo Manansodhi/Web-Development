@@ -1,6 +1,6 @@
 
 * {
-    /* wild card selector this will style the entire page with same style property */
+    /* Wild card selector this will style the entire page with same style property */
     font-style: italic;
 }
 
@@ -12,6 +12,7 @@ div{
 p{
     background-color: azure;
 }
+/*CSS Selectors define the elements to which a set of css rules apply */
 
 .big {
     font-size: 25pt;
@@ -19,4 +20,21 @@ p{
 
 .bold {
     font-weight: bold;
+}
+
+#one {
+    background-color:darkorange;
+}
+
+#two {
+    padding-left: 40px;
+}
+
+input[disabled] {
+    width:300px;
+}
+
+input[type = "text"] {
+    height:300px;
+    font-size:30pt;
 }

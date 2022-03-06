@@ -24,16 +24,19 @@
         This is inside div
     </div>
     <p style ="font-size: 20pt; border: 1px solid black">  <! this type of styling  is called inline styling the difference is that when we write styling for any element in style.css it get applied to all the elements of that type or elements with same name >
-        This is inside Paragraph
+         inside Paragraph
     </p>
     <div class ="big">this is div </div>
-    <div id="one" >this is div </div> <! id selector is one-one mapping>
+    <div id="one two" >this is div </div> <! id selector is one-one mapping, when we give 2 id's it can not parse id's like one SPACE two>
     <div id="two" >this is div </div>
-    <p class= "bold"> this is paragraph </p>
+    <div id="one" >this is div </div><!we name this id with same name then this is wrong we should not do that, one element should have only id >
+    <p class= "bold"> this is paragraph </p><! class can be applied on multiple elements and we can also apply 2 classes on same element
     <p class ="big"> this is paragraph </p>
     <p class ="big"> this is paragraph </p>
+    <!attribute selector selects element based on the value of the given attribute>
+    <input type = "text" value ="abcd">
+    <input disabled value="efgh">
 
 </body>
 </html>
 
-CSS Selectors define the elements to which a set of css rules apply
