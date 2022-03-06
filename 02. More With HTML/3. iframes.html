@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!
+    iframme are genrally used to embedthe external content EX- you tube videos in your page that is from different server. we generally do not use
+     iframe to embed our own page into our own another page. we can use react, angular to divide our page into component so that we can reuse that 
+     again again 
+    
+    >
+
+    <h1>iFrames</h1>
+    <h2>Open in Frame :</h2>
+    <ul>
+        <li><a target="frame1" href="./links.html">Links</a></li>
+        <! if set target="_blank" then it will open the link in new page and if set target to the name of iframe then that frame will get open in 
+        iframe  >
+        <li><a target="frame1" href="./inner-links.html">Inner Links</a></li>
+    </ul>
+
+    <!iframe id = frame1 frameborder="0" width="400" height="400" src="https://example.com"></iframe >    
+    <!some websites donot allow to get opened inside iframes and if we want to open that so we can set the target="_blank" in 'links.html'>
+    <!what if we want to open the google.com in parent page "iframe.html" and internal page is "links.html" so we can write "target=_parent" > 
+
+
+    <!iframe 
+    frameborder="0"
+    width="400" 
+    height="400"
+    src="./links.html"
+    ></iframe>
+
+        <! iframes are used to imbed the content of another web page into one web page and they have border by default. we cam remove border by 
+        setting frameborder=0 when we run iframe.html we can see in network section inside inspect section that links.html is also loaded 
+        like on all web pages where youtube videos are embeded are done using iframes  and also on medium article github code are embeded using 
+        iframes >
+    
+        <!h3>Embedded Page</h3>
+
+    <!iframe frameborder="0" width="400" height="400" src="https://example.com"></iframe >    
+        <! iframe are INLINE elements means you can join 2 iframes one after the other and they will be shown one after the other>
+
+    
+    
+    <!iframe name = "frame1" frameborder="1" width="400" height="400" src="./links.html"></iframe>
+    <!iframe frameborder="1" width="400" height="400" src="https://example.com"></iframe >    
+
+     <!h1>Recursive iframes</h1>   
+    <iframe frameborder="1" width="400" height="400" src="./iframes.html">
+
+</body>
+</html> 
