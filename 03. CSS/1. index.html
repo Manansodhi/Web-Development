@@ -23,8 +23,10 @@
         <! this element has both class "big" & "bold" so bothh the properties get applie to it
         This is inside div
     </div>
-    <p style ="font-size: 20pt; border: 1px solid black">  <! this type of styling  is called inline styling the difference is that when we write styling for any element in style.css it get applied to all the elements of that type or elements with same name >
-         inside Paragraph
+    <! this type of styling  is called inline styling the difference is that when we write styling for any element in style.css it get applied to all the elements 
+    of that type or elements with same name>
+    <p style ="font-size: 20pt; border: 1px solid black">  
+        inside Paragraph
     </p>
     <div class ="big">this is div </div>
     <div id="one two" >this is div </div> <! id selector is one-one mapping, when we give 2 id's it can not parse id's like one SPACE two>
@@ -36,6 +38,37 @@
     <!attribute selector selects element based on the value of the given attribute>
     <input type = "text" value ="abcd">
     <input disabled value="efgh">
+
+    <h2>this is heading 2</h2>
+    <p>this is first para</p>
+    <p>this is second para</p>
+    <p>this is third para</p>
+    <! what we see after applying comparator is that  first para after h2 tag get bold but 2nd para doesnot get bold>
+
+    <!section>
+        <h2>inside section h2 tag</h2>
+        <p>this  is inside section p tag</p>
+    </section>
+    
+    <!summary about general sibling combinators is that it get applied to all the elements(that the second element follows the first through not necessarily immediately
+     and both share same parent) but in adjacent sibling it get applied to only adjacent elements (second elements directly follows the first and both share the same 
+     parent)>
+
+    <! child combinators ">" select nodes that are not direct children of the first element, descendant combinator " "(space) selects nodes that are descendants of first 
+    element>
+    <!section>
+        <p>outer para</p>
+        <article>
+            <p>article para</p>
+        </article>
+        <p>this is some other paragraph</p>
+        <h2>this is heading</h2>
+        <p>one more para</p>
+    </section>
+
+    <!pseudo Selector these are that do not really exit on page when we write the page but they get applied when we run the page
+    <div class="box">hello</box>
+    <input type = "text">
 
 </body>
 </html>

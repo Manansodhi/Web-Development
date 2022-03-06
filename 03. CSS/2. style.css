@@ -12,7 +12,9 @@ div{
 p{
     background-color: azure;
 }
-/*CSS Selectors define the elements to which a set of css rules apply */
+/*CSS Selectors define the elements to which a set of css rules apply 
+for class name we use .classname
+*/
 
 .big {
     font-size: 25pt;
@@ -22,6 +24,7 @@ p{
     font-weight: bold;
 }
 
+/* for id name we will use #id name*/
 #one {
     background-color:darkorange;
 }
@@ -37,4 +40,60 @@ input[disabled] {
 input[type = "text"] {
     height:300px;
     font-size:30pt;
+}
+
+/*Combinators allow us to select particular elemnet based on its position of screen 
+adjacent sibling, general sibling, child, descendant combinator*/
+
+/*general sibling comparator*/
+h2 + p {
+    font-weight: bold;
+}
+
+ /* adjacent sibling combionator so all the paragraph tag after h2 get color red but section p tag does not but when we have h2 tag inside section and after h2
+  we have p then p tag inside section under h2 will also be red but if h2 is after p tag then it will not have red color and word sibling from adjacent sibling
+   combinator means that paragraph that come after h2 will get effected and its color get changed, and as we know browser read pages from top to bottom so it 
+   will not read above p tag after reading h2 tag (means it will not go in reverse direction to read p tag*/
+h2 ~ p {
+    color : red;
+}
+
+section > p {
+    background-color: aqua;
+}
+/* means ki jo bhi p tag elements section ke ander h un per ye property lga do*/
+
+section p {
+    font-family: monospace;
+}
+
+/*means it will affect any p tag element which might not be direct child of section but it could be child of an element which it self is the child of section
+(grand child,grand grand child) */
+
+.box {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    padding: 10px;
+    color: darkslategrey;
+}
+
+.box:hover {
+    background-color: darkgreen;
+    color: beige;
+    font-weight: bold;
+}
+
+/*active state when we are on box and we click and hold*/
+.box:active {
+    height: 100;
+    width: 100px;
+    font-size: 25pt;
+}
+
+/*when we are outside the box it's size will be small and when we click inside the text box it enlarge (it focuses when keyborad is on the element and active when
+ mouse is one the element*/
+input:focus {
+    font-size: 30pt;
+    width: 200px;
 }
