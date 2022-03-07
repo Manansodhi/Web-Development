@@ -1,0 +1,43 @@
+/* li {
+    font-weight: bold;
+} */
+
+/* all li elements under ul will get blue color */
+ul > li {
+    color: blue;
+}
+
+/* all li elements under ol will get red color */
+ol > li { 
+    color: red;
+}
+
+/*"child" when we write like this styling may not be applied becoz inner ul is not the direct the child of outer ul ther eis li in between. A>B means that B is directly inside A . lets say we write x>y{} then there can not be any element between x and y this will not work y has to be directly under x */
+/* ul > ul {
+    background-color: aqua;
+} */
+
+/* Descendant means it is going to apply to any thing that is inside that element either directly inside that or inside another layer. matlab delhe let say we have x y{} then there is x element and y element inside x so between x and y there can be any element */
+ul ul {
+    background-color: yellowgreen;
+}
+
+/* all li directly or indirectly under ul will get monospace font */
+ul li {
+    font-family: monospace;
+}
+
+/* esme kya ho raha h ki ul ke undr li and uske bhi undr li h toh uspr apply ho raha h  one point one and one point two*/
+ul li li {
+    font-weight: 900;
+}
+
+/* if we insert paragraph tag just after ol tag and before ul tag then background color does not apply becoz we are using + it has to be immediately next sibling. x+y{} means that there is x element and immediately after there is y element nothing should come between these 2*/
+/* ol + ul {
+    background-color: aquamarine;
+} */
+
+/* but if we use ~ operator. becoz ul is after ol in this it does not matters what is between them. x~y{} means that there could be x element and there could be any number of elements between x and y */
+ol ~ ul {
+    background-color: aquamarine;
+}
