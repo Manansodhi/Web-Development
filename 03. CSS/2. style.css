@@ -38,7 +38,7 @@ input[disabled] {
     background-color:goldenrod;
 }
 
-input[type = "text"] {
+/*input[type = "text"] {
     height:300px;
     font-size:30pt;
     background-color: aqua;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "4. css inheritance.css" rel = "stylesheet">
+
+    <style>
+        * {
+            background-color: #aaaaff;
+        }
+        /* so when we apply style property to * then it is taking style propert from style tag int .html file instead from .css file and if just move this style tag above the link tag then .css file styling will be applied becoz it is given more precedence so it give more precedence to one that is defined later on over that is defined earlier on*/
+    </style>
+
+</head>
+<body>
+    <div class = "cl1" id = "id1">
+        DIV 1
+    </div>
+    <!order of inheritance of style firstly the * of style tag is applied then * of style.css is applied after that style of div element is applied then it is taking the value from .cl1 class after that it is taking the value from id1 but we have defined id1 twice so it over writes the first value and takes the second the value 
+    <div class = "cl1" id = "id2">
+        DIV 2
+    </div>
+    <div class = "cl3" id = "id3">
+        DIV 3
+    </div>
+
+    <div style = "background-color: #778899;">
+        DIV 4
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+* {
+    background-color: lightcyan;
+}
+
+/* any style we apply on star is over written by style we apply to any particular class */
+
+.cl1 {
+    background-color: lightcoral;
+}
+
+div {
+    background-color: lightseagreen;
+}
+
+#id1 {
+    background-color: lightgreen;
+}
+
+/*ORDER OF INHERITANCE
+ when we apply something with id it takes prcedence over class and class take precedence over * , precedence dose not changes if we also changes the order of 
+class and id statements, agar koi element ke name (div , p, h) per style apply hua h toh voh sabse uppar apply hoga, or agar kisi class per style apply ho rakh 
+h toh that overrides the elements and agar kisi id per style define h toh that over rides the class 
+id > class > element > * (> -- tells like this is like id take precedence over class ...). *-> applies to all , 'dev','p' -> applies to that type of elements,
+".abc" -> applies to class abc, #xyz -> applies to id xyz
+*/
+
+
+/* like we have given the color to id1 lightgreen and now we again give colr to id1 that is lightsteelblue so what we see is that lightsteelblue color apply on 
+id1 so it css when we do same things twice last one gets precedence over the previous value, same thing happens with class lastest style applies over previous ones*/
+
+#id1 {
+    background-color: lightsteelblue;
+}
