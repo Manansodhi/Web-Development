@@ -14,11 +14,13 @@
     </style>
 
 </head>
+
+<! we can write any text without any element and that is called bare text and it belongs to body and all the properties given to body applies to bare text(inline element) >
 <body>
     <div class = "cl1" id = "id1">
         DIV 1
     </div>
-    <!order of inheritance of style firstly the * of style tag is applied then * of style.css is applied after that style of div element is applied then it is taking the value from .cl1 class after that it is taking the value from id1 but we have defined id1 twice so it over writes the first value and takes the second the value 
+    <!order of inheritance of style firstly the * of style tag is applied then * of style.css is applied after that style of div element is applied then it is taking the value from .cl1 class after that it is taking the value from id1 but we have defined id1 twice so it over writes the first value and takes the second the value >
     <div class = "cl1" id = "id2">
         DIV 2
     </div>
@@ -26,9 +28,32 @@
         DIV 3
     </div>
 
+    <!this is inline style that means that any style we apply to any HTML element inside html code . Inline style take precedence over any other position style defined(id,class,*,...anything)>
     <div style = "background-color: #778899;">
         DIV 4
     </div>
+
+    <! changing the block element to inline element , one benifit of block elements is that they can give themseleves boder, padding, margin left right>
+    <p style = "display: inline"> para 1</p> some bare text
+    <! changing the inline element to block element >
+    <b style="display: block" > Bold text</b>
+
+    <!div(block element) and span(inline element) are genric elements they don't apply extra styling. these two elements are very usefull for grouping text  >
+    <div> this is div </div>
+    some <span> this is span </span>
+
+
+    <! Margin Border Padding>
+    <div class= "box" id="div1">
+        one
+        <div class= "box" id="div2">
+            two
+            <div class= "box" id="div3">
+                three
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
