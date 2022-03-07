@@ -31,3 +31,39 @@ id1 so it css when we do same things twice last one gets precedence over the pre
 #id1 {
     background-color: lightsteelblue;
 }
+
+/* when inspect 3 nested div then we see that top bottom left right all margin are applied to all the 3 div element having same class name */
+/* After applying padding of 10px we inspect and see that themargin area of div2 gets the color of div1(coming from background color of its parent). padding of div2 get
+ the color of its content color or background color of div2 itself. margin m parent ka color leta h and padding m self color leta h  */
+.box {
+    margin:20px;
+    padding: 10px;
+    border: solid black 3px;
+}
+/* border creates its own space it does not take the space of padding or margin and what we see after inspecting is that margin is outside the border and padding is
+ inside the border and between them is the border  */
+
+/* Very intersting way to understand these padding margin border is let we see our house from top view then there will be road then moving towords inwards we have walking
+ path then after that we have the wall of the house and after that let say we have garden after that we have area for house so that outer part the area between road and
+  path is the margin and area/thick line betweenn path and boundary of house is the border and area between boundary of house and garden is the padding and area between 
+  garden and remaining area is the contents part and the road area is the outer element */
+
+
+  /* html elements are always read from top to bottom, lets say we add border to be large then the area will be reduced from content portion not padding and content will start to overflow  nad outer elements get there space first and inner element get there space at last */
+
+#div1 {
+    background-color: lightgreen;
+}
+
+#div2 {
+    background-color: lightsalmon;
+}
+
+#div3 {
+    background-color: lightcyan;
+}
+
+/* what we see after giving different color is that div1 class margin does not have any color and margin of div2 class has color of div1 background color and div3 margin
+has color of div2 background color  */
+
+
