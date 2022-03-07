@@ -1,0 +1,33 @@
+#para1 {
+    /* we may give the size in pt or px in earlier days of type writer the size is to be given in pt(point). we can also use "em" em is the width of the character m in the default font size. we can also measure in terms of height of window as well 1vh-> 1/100 of view port height(of window height) */
+    font-size: 30pt;
+    /* font-size: 1em; */
+    /* font-size: 10vh; */
+
+}
+
+#para2 {
+    /* monospace fonts are those that takes fixed width for every character */
+    /* font-family: monospace;
+
+    if we change the font family to serif it will take different width for same length of word-spacing */
+    font-family: serif;
+    /* serif are the extra edges drawn in alphabets and sans means without */
+    /* font-family: sans-serif; */
+
+    /* like we also multiple fonts this way in this if 1rst font cambria is not available then it will apply Cochin and so on and this is called fall back channel*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#para3 {
+    font-style: italic;
+    /* we can not generally set anything like bold or underline using font style. if want to make font thinner we can use lighter */
+    font-weight: bold;
+    /* if we want to make even more thicker we can use "bolder"  */
+    /* font-weight: lighter; */
+}
+
+#para4 {
+    word-spacing: 15px;
+    letter-spacing: 5px;
+}
