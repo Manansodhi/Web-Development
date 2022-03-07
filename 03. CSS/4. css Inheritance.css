@@ -49,7 +49,7 @@ id1 so it css when we do same things twice last one gets precedence over the pre
   garden and remaining area is the contents part and the road area is the outer element */
 
 
-  /* html elements are always read from top to bottom, lets say we add border to be large then the area will be reduced from content portion not padding and content will start to overflow  nad outer elements get there space first and inner element get there space at last */
+  /* HTML elements are always read from top to bottom, lets say we add border to be large then the area will be reduced from content portion not padding and content will start to overflow  nad outer elements get there space first and inner element get there space at last */
 
 #div1 {
     background-color: lightgreen;
