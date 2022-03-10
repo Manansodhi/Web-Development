@@ -30,6 +30,9 @@ div.btn:hover {
     /* if we want to happen this little slowly then we can the transition to 1sec */
     transition: 0.5s;
 
+    /* we can also apply different transition for different things like upper active ke liye transition time 0.5s h. toh hum asa kar sakte h ki transform ka hone m 0.2s lage and box-shadow ka hone m 0.6s. so what we see is that shadow is coming later */
+    transition: transform 0.2s, box-shadow 0.6s;
+
 }
 
 
