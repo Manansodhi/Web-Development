@@ -1,0 +1,52 @@
+/* how to have effects like we hover on something and it slowly grows and shrinks and the things that happen slowly are done thru transitions. and transition will set that for how much period of time do we want thing to transition. and also rotating elements increasing/decreasing sizes and these kind of things can be done using transforms */
+
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: indianred;
+    padding:20px;
+    margin: 20px;
+}
+
+
+/* tansform: scale(2,2) increases the size twice also the inside number instead of this if we simply increase the height and width of div of class one then it will increase its height and width but inside written thing will not increase proptionally whereas in transform :scale() inside written things(text/number) also increases propotionally. transform scale means that element get drawn in its own place and then it is grown and elements after that are not pushed down */
+.one {
+    /* transform: scale(2, 2); */
+    /* height: 200px;
+    width:200px; */
+
+    transform: scaleX(4);
+}
+
+/* transform: rotate(30deg). we can also rotate on x axis rotateX()as we rotate in x axis then its size will decrease and at 90deg it will get vanished becoz it is 2d object and when we increase after 90deg it will start reappearing back. rotate() and rotateZ() both are same things becoz rotate by default happen on z axis*/
+.two {
+    /* transform: rotateX(90deg); */
+    transform: rotateX(120deg);
+}
+
+/* transform: translate(xTranslate, yTranslate), we can also translate x and y separtely  */
+.three {
+    /* transform: translate(20px, 50px); */
+    transform: translateX(30px) translateY(40px);
+}
+
+
+/* Mixed transformation -> translate by 100px in X direction and rotate by 45 deg but if we write other way rotate() first and then translate here it has rotated first then its X axis become in different direction or we may say that it is x also rotated by 45 degree and then translate in x direction by 200px*/
+.four {
+    /* transform: translateX(100px) rotate(45deg); */
+    transform: rotate(45deg) translateX(200px);
+}
+
+
+/* for class five we are using skew transformation that takes input in degree in different direction like we write transform: skewX(40deg) so it will fix X axis and rotate y axis in 40 deg . it is not true that if we skew in +ve direction and then skew in -ve direction it will make the shape in original diection but it will after +ve skew then it will aplly -ve skew will not be at original position*/
+.five {
+    /* transform: skewX(40deg); */
+    /* transform: skewX(-40deg); */
+    /* transform: skewY(-40deg); */
+    transform: skewX(-40deg) skewY(40deg);
+}
+
+.six {
+    transform: skew(40deg, 40deg) rotate(10deg);
+}
