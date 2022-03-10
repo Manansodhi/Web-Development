@@ -1,0 +1,42 @@
+div.btn{
+    margin: 50px;
+    background-color: peru;
+    color: white;
+    font-size: 30pt;
+    padding: 50px;
+    width: 200px;
+    border-radius: 10px;
+    /* box-shadow: color (shadow in x-axis)px  (shadow in y-axis)px ; */
+    /* box-shadow: chartreuse 10px 10px; */
+    /* box-shadow: chartreuse -10px -10px; */
+
+    /* if want to blur the shadow then we may give the 3rd parameter to 10px and this gaussian blur parameter. 10px gaussian blur means that the value of 1 pixel is inter coreleated with the values up to 10 pixel in its radius. if we have blur of 1pixel then means that every pixels color is mixed with one adjacent*/
+    /* box-shadow: aquamarine 10px 10px 10px; */
+
+    box-shadow: aquamarine 10px 10px 3px;
+
+    transition: 0.8s;
+}
+
+div.btn:hover {
+    /* like it is moving 10px in x and 10px in y */
+    /* transform: translate(10px, 10px); */
+
+    /* like if we want to make it feel that it s coming out of page then we have translate in opposite direction of shadow */
+    transform: translate(-10px, -10px);
+
+    /* now what if we want the shadow to remain in its original place. so what we can do is we can redefine the shadow with the compensation for amount which it has moved. so if we make shadow 20 px becoz box is moving -10px and -10px. so if we want to keep shadow in its original position the new position of shadow respective to box need to be 20 px 20px */
+    box-shadow: aquamarine 20px 20px 20px;
+    /* if we want to happen this little slowly then we can the transition to 1sec */
+    transition: 0.5s;
+
+}
+
+
+/* now what we want is that when we click on buton it goes down or it goes inward after pressing it */
+div.btn:active {
+    /* we will transform it and translate in opposite direction so that goes lower then its original position so we will go 5px to right , 5px to bottom  */
+    transform: translate(5px, 5px);
+    box-shadow: aquamarine 5px 5px 3px;
+    transition: 0.2s;
+}
