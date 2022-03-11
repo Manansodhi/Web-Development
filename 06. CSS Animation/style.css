@@ -1,0 +1,57 @@
+/* we are creating game in which there is a field area and in that there are small square boxes which are moving fast in vertical direction and we have our one square box which can only move in horizontal direction so game is to take that box from left side to right side without colliding with box moving vertically
+container is that field area of play & item is that small square box */
+.conatiner {
+    margin: 30px;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(186, 128, 240);
+}
+
+/* what happen it we change the block display to inline then we cannot set any width and height of inline element becoz inline will only take that much space only that is required to show content no extra space is required. but we change the height and width of inline-block element. why is there is space between these squares?? we can remove these by writing font-size: 0; in .container class. and we remove the space between these 2 lines "<div class="item"></div>" */
+ 
+.item {
+    height: 50px;
+    width:50px;
+    margin:20px;
+    background-color: yellowgreen;
+    border: solid black 1px;
+    display:inline-block;
+
+    /* so what is happening is that 0%(0sec) and 100%(10sec) we want the block to remain at its original position and at 50%(5sec) we want the box to move down 300px. timing-function we have given is 5sec so the time they reach the bottom and back to top is same */
+    animation: bounce 2s;
+    animation-iteration-count: infinite;
+
+}
+
+
+.one {
+    /* ease-in :- starts slow but ends fast */
+    animation-timing-function: ease-in;
+}
+
+.two {
+    /* ease-out :- starts fast and ends slowly */
+    animation-timing-function: ease-out;
+}
+
+.three {
+    /* linear :- in this box moves in constant speed */
+    animation-timing-function: linear;
+}
+/* for 4rth box the timing function used is ease-in-out by default we haven't change anything out. so it starts slow and fast in middle and ends slowly */
+
+
+/* how we add animation is by writing "@keyframes nameofAnimation(bounce) " and we creates frames like when 0% of animation is done what rules we want same with 50% and 100%.  */
+@keyframes bounce {
+    0% {
+        transform: scale(2);
+    }
+    50% {
+        /* when animation is 50% is done it move done by 300px and at 0% & 100% bac to original state */
+        transform: translateY(300px);
+        background-color: rgb(19, 13, 14); 
+    }
+    100% {
+
+    }
+}
