@@ -25,7 +25,7 @@
 
      /* when we have text at different height of the item then we can align them using */
      /* align items within the row perpendiculary */
-     align-items: baseline;
+     align-items: flex-end;
 
      /* it align the entire set of items(how all rows together are aligned) */
      align-content: flex-end;
