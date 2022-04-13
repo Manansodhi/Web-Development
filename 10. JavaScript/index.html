@@ -6,19 +6,23 @@
     <title>Document</title>
     <script>
         console.log('world')
-        alert("HACKED")
-        // if we pu alert() then until we press ok the rendering of the page is blocked so till now only world is printed and after pressing ok of alert box hello get printed. so that's the difference when we write things in head and body. if we write script in head with alert so that script will be executed before body's script 
+        alert("HEAD HACKED")
+        // if we put alert() then until we press ok the rendering of the page is blocked so till now only world is printed and after pressing ok of alert box hello get printed. so that's the difference when we write things in head and body. if we write script in head with alert so that script will be executed before body's script 
     </script>
-    <script src="script.js">
+    <script async defer src="script.js">
+        //  earlier "world->headHacked->externalscript->externalScriptHacked->Hello". when we write "async defer" first world->"head hacked"->externalScriptHacked(alert)->hello->externalScript(console.log of script.js) and after the alert of head hacked when we press ok then alert of external script appear and that blocks the rendering of page earlier but now it does not block the content to be loaded
+        // async->classic script will be fetched in parallel to parsing and evaluated as soon as it is available(means that if our script is async and while your html page is getting parsed and getting rendered on the page the browser will parallely download the script and will not stop to rendering your script file. it is better over slow internet becoz it can parallely request to script.js file and download separtely while it rendered the rest of html page)
+        //defer-> indicate to browser that the script is meant to be executed after the documnet has been parsed (it will not run the script even if has download the script till all the html page has been rendered)
+        //asyn deffer-> we prefer writing like this becoz script does not prevent the html page to get rendered/load user doesnot see the white screen for too long and this script get loaded parrallel to our html get rendered 
         // if we write some text inside script src="" then body of script is not evaluated
-        console.log("From script src") // this will not be evaluated
+        console.log("Inside script src") // this will not be evaluated
     </script>
 </head>
 <body>
     <h1>JAVASCRIPT INTRO</h1>
     <script type="text/javascript">
         console.log("Hello")
-        // alert("HACKED")
+        // alert("BODY HACKED")
     </script>
 </body>
 </html>
