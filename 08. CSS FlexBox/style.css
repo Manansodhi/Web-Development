@@ -145,5 +145,49 @@ the outer edges
     row-gap: 10px;
     column-gap: 20px;
 }
+the behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow(because of something like justify-content: space-between;) 
+then the gap will only take effect if that space would end up smaller
 
+*/
+
+/*
+PREFIXING FLEXBOX
+Flexbox requires some vendor prefixing to support the most browsers possible. it doesn't just include prepending properties with the vendor prefix,
+but there are actually entirely different property and value names.this is becoz flexbox spec has changed over time , creating an "old", "tweener",
+and  "new" versions.
+Perhaps the best way to handle this is to write in the new (and final) syntax and run your CSS through Autoprefixer, which handles the fallbacks 
+very well. Alternatively, here’s a Sass @mixin to help with some of the prefixing, which also gives you an idea of what kind of things need to be
+done:
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+.wrapper {
+  @include flexbox();
+}
+
+.item {
+  @include flex(1 200px);
+  @include order(2);
+}
 */
