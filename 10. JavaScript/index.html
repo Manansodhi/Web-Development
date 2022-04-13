@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('world')
+        alert("HACKED")
+        // if we pu alert() then until we press ok the rendering of the page is blocked so till now only world is printed and after pressing ok of alert box hello get printed. so that's the difference when we write things in head and body. if we write script in head with alert so that script will be executed before body's script 
+    </script>
+    <script src="script.js">
+        // if we write some text inside script src="" then body of script is not evaluated
+        console.log("From script src") // this will not be evaluated
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT INTRO</h1>
+    <script type="text/javascript">
+        console.log("Hello")
+        // alert("HACKED")
+    </script>
+</body>
+</html>
