@@ -1,0 +1,22 @@
+/* we can define css on different medium so that we can have different styling at different time(like we can different styling at the time of print or screen)
+today media-query is used when we have screen of different width so we want to add different style to different screen */
+
+.box {
+    height:100px;
+    width:100px;
+    margin:30px;
+    background-color: brown;
+}
+ 
+@media(max-width:900px){
+    .box{
+        background-color: aqua;
+    }
+}
+
+
+@media(max-width:600px){
+    .box {
+        background-color: chartreuse;
+    }
+}
