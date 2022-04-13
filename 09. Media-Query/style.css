@@ -8,6 +8,8 @@ today media-query is used when we have screen of different width so we want to a
     background-color: brown;
 }
  
+/* what is media query is that if the condition on media query gets satisified then the new style get applied to the screen over the default style */
+/* max-width/min-width are the width of the view port (size of window) */
 @media(max-width:900px){
     .box{
         background-color: aqua;
@@ -20,3 +22,7 @@ today media-query is used when we have screen of different width so we want to a
         background-color: chartreuse;
     }
 }
+
+/* if we write the query for 600px first and then 900px then in my page we will never be able to reach the 900px query and that style will be not applied ever. and this will be due to CSS cascading means that the things which are written later overwrite the things which are written earlier. so when width is less than 600px than both the properties are true and style written later on gets applied and overwrite the earlier style. so max-width property should be written in ascending(10,9 ,7 6 ...)*/
+/* in mobile phone approch we use min-width properties and order them in increasing order and in desktop approch we use max-width property and order them in decresing order */
+
